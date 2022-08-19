@@ -208,7 +208,7 @@ manage = function(plugin_data)
     return
   end
 
-  if plugin_spec.as and plugins[plugin_spec.as] then
+  if plugin_spec.as and plugins[plugin_spec.as] and not plugins[plugin_spec.as].from_requires then
     log.error(
       'The alias '
         .. plugin_spec.as
